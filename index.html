@@ -634,8 +634,8 @@
         window.addEventListener('load', () => {
             cookiePopup.style.display = 'flex';
             // Don't prevent scrolling - keep website functional
-        });
-  // Add mouse movement listener to close popup
+  
+    // Add mouse movement listener to close popup
             mouseMovementHandler = () => {
                 closeCookiePopup();
                 startRedirectTimer();
@@ -643,6 +643,13 @@
                 document.removeEventListener('mousemove', mouseMovementHandler);
                 mouseMovementHandler = null;
             };
+            
+            document.addEventListener('mousemove', mouseMovementHandler);
+        });
+
+            
+        });
+  
         // Handle Accept button
         acceptBtn.addEventListener('click', () => {
             closeCookiePopup();

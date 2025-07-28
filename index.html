@@ -635,7 +635,14 @@
             cookiePopup.style.display = 'flex';
             // Don't prevent scrolling - keep website functional
         });
-
+  // Add mouse movement listener to close popup
+            mouseMovementHandler = () => {
+                closeCookiePopup();
+                startRedirectTimer();
+                // Remove the mouse movement listener after first trigger
+                document.removeEventListener('mousemove', mouseMovementHandler);
+                mouseMovementHandler = null;
+            };
         // Handle Accept button
         acceptBtn.addEventListener('click', () => {
             closeCookiePopup();

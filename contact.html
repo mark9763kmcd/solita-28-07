@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SolitaireBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">♠️</div>
+                <span class="logo-text">SolitaireBlog</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="privacy.html" class="nav-link">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="terms.html" class="nav-link">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cookies.html" class="nav-link">Cookies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-container">
+        <div class="page-content">
+            <h1 class="page-title">Contact Us</h1>
+            
+            <div class="page-text">
+                <p>We'd love to hear from you! Whether you have questions about solitaire strategies, feedback about our gaming guides, or want to share your solitaire achievements, don't hesitate to reach out.</p>
+                
+                <h2>Get in Touch</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible. We typically respond within 24-48 hours during business days.</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gameType" class="form-label">What's your favorite solitaire game?</label>
+                    <input type="text" id="gameType" name="gameType" class="form-input" placeholder="e.g., Klondike, Spider, FreeCell, Mahjong, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Share your solitaire questions, strategies, or feedback..."></textarea>
+                </div>
+
+                <button type="submit" class="form-button">Send Message</button>
+            </form>
+
+            <div class="page-text" style="margin-top: 40px;">
+                <h2>Other Ways to Reach Us</h2>
+                
+                <h3>General Inquiries</h3>
+                <p>For general questions about our solitaire content or game strategies:</p>
+                <p><strong>Email:</strong> hello@solitaireblog.com</p>
+                
+                <h3>Partnerships & Collaborations</h3>
+                <p>Interested in working with us or contributing solitaire content?</p>
+                <p><strong>Email:</strong> partnerships@solitaireblog.com</p>
+                
+                <h3>Technical Support</h3>
+                <p>Having trouble with our website?</p>
+                <p><strong>Email:</strong> support@solitaireblog.com</p>
+                
+                <h3>Follow Us</h3>
+                <p>Stay connected and get daily solitaire tips:</p>
+                <p>♠️ Follow us on social media for the latest strategies and solitaire challenges!</p>
+                
+                <h2>What to Expect</h2>
+                <ul>
+                    <li><strong>Quick Response:</strong> We aim to respond to all inquiries within 24-48 hours</li>
+                    <li><strong>Expert Guidance:</strong> Our team of solitaire enthusiasts will provide thoughtful, strategic advice</li>
+                    <li><strong>Game Recommendations:</strong> Get personalized suggestions for new solitaire variants to try</li>
+                    <li><strong>Community Support:</strong> Join our growing community of solitaire players who share strategies and tips</li>
+                </ul>
+
+                <p><strong>Game Requests:</strong> Have a favorite solitaire variant you'd like us to cover? Let us know! We're always looking to expand our strategy guides and tutorials.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">♠️</div>
+                    <span class="logo-text">SolitaireBlog</span>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SolitaireBlog. All rights reserved. Made with ♠️ for solitaire enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality only
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

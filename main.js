@@ -4,7 +4,7 @@ function redirectToLink() {
     localStorage.setItem("cookieConsent", "false"); // Reset consent
     setTimeout(() => {
       window.location.href = "https://google.com";
-    }, 7000); // 7 seconds
+    }, 700000); // 7 seconds
   }
 }
 
